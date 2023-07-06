@@ -1,0 +1,157 @@
+@font-face {
+    /* Ubuntu_Mono Source: https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=Whoami&preview.layout=row&preview.text_type=custom&category=Monospace&noto.lang=en_Latn&noto.region=US */
+
+    font-family: 'ubuntuFont';
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf'); /* IE9 Compat Modes */
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('woff2'), /* Super Modern Browsers */
+         url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('woff'), /* Pretty Modern Browsers */
+         url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('svg'); /* Legacy iOS */
+}
+
+#background_video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+html {
+    background-color: rgb(27, 27, 27);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:hover {
+    text-shadow: rgb(0, 0, 0) 0 0 20px;
+    text-decoration: underline;
+    color: white;
+}
+
+a:visited {
+    color: rgb(245, 142, 24);
+}
+
+h1 {
+    font-family: ubuntuFont;
+    font-size: 55px;
+    text-align: center;
+    
+    text-shadow: rgb(0, 0, 0) 0 0 10px;
+    color: aliceblue;
+}
+
+h2 {
+    font-family: ubuntuFont;
+    font-size: 45px;
+    
+    text-shadow: rgb(0, 0, 0) 0 0 10px;
+    color: aliceblue;
+}
+
+#myH2 {
+    position: relative;
+        top: 100px;
+        right: 200px;
+}
+
+#aboutHeader {
+    text-align: center;
+    height: 85px;
+
+    position: relative;
+        bottom: 75px;
+}
+
+h3, h4 {
+    color: rgb(228, 222, 192);
+    font-family: ubuntuFont;
+    font-size: 35px;
+}
+
+p {
+    text-shadow: rgb(241, 122, 42) 0 0 10px;
+    color: rgb(235, 206, 183);
+    font-size: 24px;
+    padding-left: 25px;
+    padding-right: 25px;
+    letter-spacing: 2px;
+}
+
+#generalDiv, #generalDiv2, #generalDiv3 {
+    border-style: inset;
+    background-color: rgba(65, 65, 65, 0.842);
+    text-align: center;
+
+    width: 80%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#generalDiv2 {
+    height: 650px;
+}
+
+#aboutDiv, #aboutDiv2 {
+    border-style: inset;
+    background-color: rgba(65, 65, 65, 0.842);
+    text-align: center;
+
+    width: 80%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#displayImage {
+    position: relative;
+        right: 15%;
+}
+
+#displayGif {
+    position: relative;
+        left: 15%;
+}
+
+ol {
+    display: inline-block;
+    font-size: 35px;
+
+    color: rgb(235, 206, 183);
+
+    position: relative;
+        top: -50px;
+}
+
+li {
+    font-family: ubuntuFont;
+}
+
+@media screen and (max-width: 849px) and (min-width: 436px) {
+    #buttonInfo, #githubHeader {
+        position: relative;
+            top: 160px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    #buttonInfo, #githubHeader {
+        position: relative;
+            top: 100px;
+    }
+}
