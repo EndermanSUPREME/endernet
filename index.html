@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ender-Net</title>
+
+        <!--Auto Refreshes the web_page-->
+        <!-- <meta http-equiv="refresh" content="10"> -->
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+
+        <link rel="icon" href="images/logo.png">
+
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+
+    <body onresize="setImageSize()" onload="setImageSize()">
+        <h1>Welcome to my Site!</h1>
+        <video id="background_video" autoplay muted onended="setNextVideo()">
+            <source src="videos/videoOne.mp4" type="video/mp4">
+        </video>
+
+        <main>
+            <div id="generalDiv">
+                <h3><a href="about.html">Whoami?</a></h3>
+                    <p> <!-- General Summary -->
+                        My name is Noah, my online alias is `Ender`, I am an active learning game developer, ethical hacker in learning, and a hardworking reliable worker.<br>
+                        Consisting my background: I have been making games through the Unity Engine since September 2019, junior year of high school.<br>
+                        I have been self-teaching myself <a href="https://app.hackthebox.com/profile/activity/625394" target="_blank">ethical hacking</a> using Kali Linux and pwning machines on <a href="https://www.hackthebox.com/">HackTheBox</a> since March 2022,<br>
+                        most of my experience revolves around Linux-based machine, but I am open to learn more about pwning Windows Environments!<br>
+                        I have experience programming in several languages such as Java, Python, C#.
+                    </p>
+            </div>
+
+            <div id="generalDiv2">
+                <h3><a href="https://endermansupreme.itch.io/" target="_blank">My Itch.IO</a></h3>
+                <h4><a href="https://www.youtube.com/@There_is_Light_in_the_Darkness" target="_blank">Game-Dev: Updates Channel</a></h4>
+                    <h4>High Light Projects</h4>
+                        <ol>
+                            <li><a href="https://endermansupreme.itch.io/chat-2" target="_blank">CHAT_2</a></li>
+                            <li><a href="https://endermansupreme.itch.io/chat" target="_blank">CHAT</a></li>
+                            <li><a href="https://endermansupreme.itch.io/adenia" target="_blank">Adenia</a></li>
+                        </ol>
+                        <br>
+
+                    <h4 id="buttonInfo">Press the Images to See the Next</h4>
+                    <h3 id="githubHeader"><a href="https://github.com/EndermanSUPREME/" target="_blank">My Github</a></h3>
+
+                    <a href="#" onclick="setNextDisplayPicture()"><img alt="" id="displayImage" src="images/picture(1).png"></a>
+                    <a href="#" onclick="setNextDisplayGif()"><img alt="" id="displayGif" src="images/gifClip(1).gif"></a>
+            </div>
+        </main>
+
+        <footer>
+            <div id="generalDiv3">
+                <p>Question about my Game Development or found possible bugs/glitches in one of my Releases? <br> <a href="maltio:enderdevunity2019@gmail.com">Email Me!</a> <br> Copyright &copy; 2023 Ender</p>
+            </div>
+        </footer>
+
+        <script src="js/js.js"></script>
+    </body>
+</html>
