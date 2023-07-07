@@ -142,6 +142,179 @@ li {
     font-family: ubuntuFont;
 }
 
+@media screen and (min-width: 1921px) {
+    #displayImage, #displayGif {
+        width: 400px;
+        height: 400px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 22%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 22%;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1600px) {
+    #displayImage, #displayGif {
+        width: 350px;
+        height: 350px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 20%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 20%;
+    }
+}
+
+@media screen and (max-width: 1599px) and (min-width: 1440px) {
+    #displayImage, #displayGif {
+        width: 250px;
+        height: 250px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 25%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 25%;
+    }
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1366px) {
+    #displayImage, #displayGif {
+        width: 250px;
+        height: 250px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 25%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 25%;
+    }
+}
+
+@media screen and (max-width: 1365px) and (min-width: 1155px) {
+    #displayImage, #displayGif {
+        width: 200px;
+        height: 200px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 25%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 25%;
+    }
+}
+
+@media screen and (max-width: 1154px) and (min-width: 1050px) {
+    #displayImage, #displayGif {
+        width: 200px;
+        height: 200px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 15%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 15%;
+    }
+}
+
+@media screen and (max-width: 1049px) and (min-width: 850px) {
+    #displayImage, #displayGif {
+        width: 220px;
+        height: 220px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 15%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 15%;
+    }
+}
+
+@media screen and (max-width: 849px) and (min-width: 660px) {
+    #displayImage, #displayGif {
+        width: 220px;
+        height: 220px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 5%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 5%;
+    }
+}
+
+@media screen and (max-width: 659px) and (min-width: 485px) {
+    #displayImage, #displayGif {
+        width: 185px;
+        height: 185px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 0%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 0%;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    #displayImage, #displayGif {
+        width: 140px;
+        height: 140px;
+        
+    }
+
+    #displayImage {
+        position: relative;
+            right: 0%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 0%;
+    }
+}
+
+/* Repositioning For Smaller Mobile Screen Widths */
+
 @media screen and (max-width: 849px) and (min-width: 436px) {
     #buttonInfo, #githubHeader {
         position: relative;
