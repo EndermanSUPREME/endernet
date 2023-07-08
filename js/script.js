@@ -51,7 +51,7 @@ function setImageSize()
     let currentScreenWidth = screen.width;
 
     // Change the image relative position
-    if (getBrowserName() == 'Chrome') {
+    if (getBrowserName() == 'Chrome' || getBrowserName() == 'Safari') {
         if (currentScreenWidth < 1366)
         {
             if (currentScreenWidth < 850)
