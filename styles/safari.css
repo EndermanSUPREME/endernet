@@ -372,14 +372,14 @@ li {
     }
 }
 
-@media screen and (max-width: 435px) and (min-width: 381px) {
+@media screen and (max-width: 435px) and (min-width: 366px) {
     #buttonInfo, #githubHeader {
         position: relative;
             top: 80px;
     }
 }
 
-@media screen and (max-width: 380px) and (min-width: 100px) {
+@media screen and (max-width: 365px) and (min-width: 100px) {
     #buttonInfo, #githubHeader {
         position: relative;
             top: 70px;
