@@ -1,24 +1,95 @@
 let video_count = 0, pictureID = 0, gifID = 0;
 
+if (window.onload)
+{
+    let pageStyle = document.getElementById("externalStyleSheet")
+
+    if (getBrowserName() == 'Chrome')
+    {
+        pageStyle.setAttribute('href', "styles/chrome.css");
+    } else if (getBrowserName() == 'Safari')
+        {
+            pageStyle.setAttribute('href', "styles/safari.css");
+        } else if (getBrowserName() == 'Firefox')
+            {
+                pageStyle.setAttribute('href', "styles/firefox.css");
+            } else if (getBrowserName() == 'Edge')
+                {
+                    pageStyle.setAttribute('href', "styles/edge.css");
+                }
+}
+
+function getBrowserName() {
+    let browserName = '';
+    let userAgent = navigator.userAgent;
+    (typeof InstallTrigger !== 'undefined') && (browserName = 'Firefox');
+    ( /* @cc_on!@*/ false || !!document.documentMode) && (browserName = 'IE');
+    (!!window.chrome && userAgent.match(/OPR/)) && (browserName = 'Opera');
+    (!!window.chrome && userAgent.match(/Edge/)) && (browserName = 'Edge');
+    (!!window.chrome && !userAgent.match(/(OPR|Edge)/)) && (browserName = 'Chrome');
+
+    let ua_lower = userAgent.toLowerCase(); 
+    if (ua_lower.indexOf('safari') != -1) { 
+        if (ua_lower.indexOf('chrome') > -1) {
+            browserName = 'Chrome';
+        } else {
+            browserName = 'Safari';
+        }
+    }
+
+  
+    /**
+     * Expected returns
+     * Firefox, Opera, Edge, Chrome, Safari
+     */
+
+    return browserName;
+}
+
 function setImageSize()
 {
     let currentScreenWidth = screen.width;
 
     // Change the image relative position
-    if (currentScreenWidth < 1366)
-    {
-        if (currentScreenWidth < 850)
+    if (getBrowserName() == 'Chrome') {
+        if (currentScreenWidth < 1366)
         {
-            document.getElementById("generalDiv2").style.height = "850px";
-            setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-250px")
+            if (currentScreenWidth < 850)
+            {
+                if (currentScreenWidth < 354)
+                {
+                    document.getElementById("generalDiv2").style.height = "910px";
+                    setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-250px")
+                } else
+                    {
+                        document.getElementById("generalDiv2").style.height = "850px";
+                        setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-250px")
+                    }
+            } else
+                {
+                    setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-395px")
+                    document.getElementById("generalDiv2").style.height = "650px";
+                }
         } else
             {
-                setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-395px")
-                document.getElementById("generalDiv2").style.height = "650px";
+                setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-500px")
             }
-    } else
+    } else if (getBrowserName() == 'Firefox')
         {
-            setImagePosition(document.getElementById("displayImage"), document.getElementById("displayGif"), "-500px")
+            if (currentScreenWidth < 850)
+            {
+                if (currentScreenWidth < 565)
+                {
+                    document.getElementById("generalDiv2").style.height = "910px";
+                } else
+                    {
+                        document.getElementById("generalDiv2").style.height = "850px";
+                        
+                    }
+            } else
+                {
+                    document.getElementById("generalDiv2").style.height = "650px";
+                }
         }
 }
 

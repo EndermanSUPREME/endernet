@@ -11,7 +11,7 @@
 
         <link rel="icon" href="images/logo.png">
 
-        <link rel="stylesheet" href="styles/style.css">
+        <link id="externalStyleSheet" rel="stylesheet" href="styles/chrome.css">
     </head>
 
     <body onresize="setImageSize()" onload="setImageSize()">
@@ -46,8 +46,8 @@
                     <h4 id="buttonInfo">Press the Images to See the Next</h4>
                     <h3 id="githubHeader"><a href="https://github.com/EndermanSUPREME/" target="_blank">My Github</a></h3>
 
-                    <a href="#" onclick="setNextDisplayPicture()"><img alt="" id="displayImage" src="images/picture(1).png"></a>
-                    <a href="#" onclick="setNextDisplayGif()"><img alt="" id="displayGif" src="images/gifClip(1).gif"></a>
+                    <a id="imgButton" href="index.html#displayImage" onclick="setNextDisplayPicture()"><img alt="" id="displayImage" src="images/picture(1).png"></a>
+                    <a id="gifButton" href="index.html#displayGif" onclick="setNextDisplayGif()"><img alt="" id="displayGif" src="images/gifClip(1).gif"></a>
             </div>
         </main>
 

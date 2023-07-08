@@ -295,11 +295,61 @@ li {
     }
 }
 
-@media screen and (max-width: 484px) {
+@media screen and (max-width: 484px) and (min-width: 371px) {
     #displayImage, #displayGif {
         width: 140px;
         height: 140px;
-        
+    }
+
+    #displayImage {
+        position: relative;
+            right: 0%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 0%;
+    }
+}
+
+@media screen and (max-width: 370px) and (min-width: 345px) {
+    #displayImage, #displayGif {
+        width: 120px;
+        height: 120px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 0%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 0%;
+    }
+}
+
+@media screen and (max-width: 344px) and (min-width: 322px) {
+    #displayImage, #displayGif {
+        width: 120px;
+        height: 120px;
+    }
+
+    #displayImage {
+        position: relative;
+            right: 0%;
+    }
+    
+    #displayGif {
+        position: relative;
+            left: 0%;
+    }
+}
+
+@media screen and (max-width: 321px) and (min-width: 100px) {
+    #displayImage, #displayGif {
+        width: 100px;
+        height: 100px;
     }
 
     #displayImage {
@@ -322,9 +372,21 @@ li {
     }
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 435px) and (min-width: 381px) {
     #buttonInfo, #githubHeader {
         position: relative;
-            top: 100px;
+            top: 80px;
+    }
+}
+
+@media screen and (max-width: 380px) and (min-width: 100px) {
+    #buttonInfo, #githubHeader {
+        position: relative;
+            top: 70px;
+    }
+
+    #imgButton, #gifButton {
+        position: relative;
+            top: -55px;
     }
 }
