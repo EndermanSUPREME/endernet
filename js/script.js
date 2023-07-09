@@ -1,8 +1,31 @@
 let video_count = 0, pictureID = 0, gifID = 0;
 
+// Chrome
 if (window.onload)
 {
+    setBrowserStyle();
+}
+
+// FireFox
+window.addEventListener("load", (event) => {
+    setBrowserStyle();
+});
+
+// Edge & Chrome
+window.addEventListener('load', function() {
+    setBrowserStyle();
+}, false);
+
+function setBrowserStyle() {
     let pageStyle = document.getElementById("externalStyleSheet")
+
+    if (getBrowserName() == 'Edge' || /Edg/.test(navigator.userAgent))
+    {
+        alert(/Edg/.test(navigator.userAgent));
+        pageStyle.setAttribute('href', "styles/edge.css");
+
+        return;
+    }
 
     if (getBrowserName() == 'Chrome')
     {
@@ -13,10 +36,7 @@ if (window.onload)
         } else if (getBrowserName() == 'Firefox')
             {
                 pageStyle.setAttribute('href', "styles/firefox.css");
-            } else if (getBrowserName() == 'Edge')
-                {
-                    pageStyle.setAttribute('href', "styles/edge.css");
-                }
+            }
 }
 
 function getBrowserName() {

@@ -483,3 +483,22 @@ li {
         font-size: 15px;
     }
 }
+
+/* Adjustments for the about.html aboutHeader */
+
+@media screen and (max-width: 585px) {
+    #aboutHeader {
+        text-align: center;
+        height: 85px;
+    
+        position: relative;
+            bottom: 120px;
+    }
+
+    #myH2 {
+        position: relative;
+            top: 150px;
+            
+        padding-left: 200px;
+    }  
+}
