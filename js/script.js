@@ -1,6 +1,6 @@
 let video_count = 0, pictureID = 0, gifID = 0;
 
-// Chrome
+// Chrome Safari
 if (window.onload)
 {
     setBrowserStyle();
@@ -110,7 +110,26 @@ function setImageSize()
                 {
                     document.getElementById("generalDiv2").style.height = "650px";
                 }
-        }
+        } else if (getBrowserName() == 'Safari')
+            {
+                // Safari uses different methods to capture screen specs
+                currentScreenWidth = window.innerWidth;
+
+                if (currentScreenWidth <= 865)
+                {
+                    if (currentScreenWidth < 565)
+                    {
+                        document.getElementById("generalDiv2").style.height = "910px";
+                    } else
+                        {
+                            document.getElementById("generalDiv2").style.height = "910px";
+                            
+                        }
+                } else
+                    {
+                        document.getElementById("generalDiv2").style.height = "650px";
+                    }
+            }
 }
 
 function setImagePosition(imgObject, gifObject, pixels)

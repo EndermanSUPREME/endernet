@@ -44,6 +44,18 @@ a:visited {
     color: rgb(245, 142, 24);
 }
 
+.mButton {
+    border-style: solid;
+    border-color: rgb(223, 208, 186);
+    border-radius: 50px;
+    border-width: 4px;
+    padding: 10px;
+}
+
+.mButton:hover {
+    background-color: rgb(151, 149, 130);
+}
+
 h1 {
     font-family: ubuntuFont;
     font-size: 55px;
@@ -88,6 +100,7 @@ p {
     padding-left: 25px;
     padding-right: 25px;
     letter-spacing: 2px;
+    line-height: 50px;
 }
 
 #generalDiv, #generalDiv2, #generalDiv3 {
@@ -121,11 +134,13 @@ p {
 #displayImage {
     position: relative;
         right: 15%;
+        top: -500px;
 }
 
 #displayGif {
     position: relative;
         left: 15%;
+        top: -500px;
 }
 
 ol {
@@ -141,6 +156,10 @@ ol {
 li {
     font-family: ubuntuFont;
 }
+
+/* =========================================================================== */
+/* ============================== Media Queries ============================== */
+/* =========================================================================== */
 
 @media screen and (min-width: 1921px) {
     #displayImage, #displayGif {
@@ -180,6 +199,9 @@ li {
     #displayImage, #displayGif {
         width: 250px;
         height: 250px;
+
+        position: relative;
+            top: -450px;
     }
 
     #displayImage {
@@ -197,6 +219,9 @@ li {
     #displayImage, #displayGif {
         width: 250px;
         height: 250px;
+
+        position: relative;
+            top: -450px;
     }
 
     #displayImage {
@@ -214,6 +239,9 @@ li {
     #displayImage, #displayGif {
         width: 200px;
         height: 200px;
+
+        position: relative;
+            top: -450px;
     }
 
     #displayImage {
@@ -231,6 +259,9 @@ li {
     #displayImage, #displayGif {
         width: 200px;
         height: 200px;
+
+        position: relative;
+            top: -400px;
     }
 
     #displayImage {
@@ -248,6 +279,9 @@ li {
     #displayImage, #displayGif {
         width: 220px;
         height: 220px;
+
+        position: relative;
+            top: -400px;
     }
 
     #displayImage {
@@ -265,6 +299,9 @@ li {
     #displayImage, #displayGif {
         width: 220px;
         height: 220px;
+
+        position: relative;
+            top: -250px;
     }
 
     #displayImage {
@@ -282,6 +319,9 @@ li {
     #displayImage, #displayGif {
         width: 185px;
         height: 185px;
+
+        position: relative;
+            top: -250px;
     }
 
     #displayImage {
@@ -299,6 +339,9 @@ li {
     #displayImage, #displayGif {
         width: 140px;
         height: 140px;
+
+        position: relative;
+            top: -250px;
     }
 
     #displayImage {
@@ -316,6 +359,9 @@ li {
     #displayImage, #displayGif {
         width: 120px;
         height: 120px;
+
+        position: relative;
+            top: -250px;
     }
 
     #displayImage {
@@ -333,6 +379,9 @@ li {
     #displayImage, #displayGif {
         width: 120px;
         height: 120px;
+
+        position: relative;
+            top: -250px;
     }
 
     #displayImage {
@@ -350,6 +399,9 @@ li {
     #displayImage, #displayGif {
         width: 100px;
         height: 100px;
+
+        position: relative;
+            top: -250px;
     }
 
     #displayImage {
@@ -389,4 +441,37 @@ li {
         position: relative;
             top: -55px;
     }
+}
+
+/* Font Scaling for Update Channel in index.html */
+
+@media screen and (max-width: 597px) and (min-width: 442px) {
+    #yt_link {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 441px) {
+    #yt_link {
+        font-size: 15px;
+    }
+}
+
+/* Adjustments for the about.html aboutHeader */
+
+@media screen and (max-width: 585px) {
+    #aboutHeader {
+        text-align: center;
+        height: 85px;
+    
+        position: relative;
+            bottom: 130px;
+    }
+
+    #myH2 {
+        position: relative;
+            top: 150px;
+            
+        padding-left: 200px;
+    }  
 }
