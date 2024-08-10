@@ -30,6 +30,10 @@
                 font-family: ubuntuFont;
             }
 
+            #topLayer {
+                padding-top: 25px;
+            }
+
             #background_video {
                 width: 100vw;
                 height: 100vh;
@@ -45,14 +49,12 @@
     </head>
 
     <body>
-        <h1>Welcome to my Site!</h1>
-
         <video id="background_video" autoplay muted loop>
             <source src="videos/videoOne.mp4" type="video/mp4">
         </video>
 
         <main>
-            <nav class="navbar navbar-dark bg-dark fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
                     <div>
                         <!-- Used to push the button to the right side of the top bar -->
@@ -71,7 +73,7 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Summary</a>
+                                    <a class="nav-link active" aria-current="page" href="index.html">Summary</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="gameDevelopment.html">Game Development</a>
@@ -95,7 +97,7 @@
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li id="dropdownTitle">Cyber Security</li>
-                                        <li><a class="dropdown-item" href="#">Windows Keylogger</a></li>
+                                        <li><a class="dropdown-item" href="windowsKeyLogger.html">Windows Keylogger</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -104,36 +106,20 @@
                 </div>
             </nav>
 
-            <div>
-                <h3>Whoami?</h3>
-                    <p> <!-- General Summary -->
-                        My name is Noah, my online alias is `Ender`, I am an active learning game developer, ethical hacker in learning, and a hardworking reliable worker.<br>
-                        Consisting my background: I have been making games through the Unity Engine since September 2019, junior year of high school.<br>
-                        I have been self-teaching myself <a class="mButton" href="https://app.hackthebox.com/profile/activity/625394" target="_blank">ethical hacking</a> using Kali Linux and pwning machines on <a href="https://www.hackthebox.com/">HackTheBox</a> since March 2022,<br>
-                        most of my experience revolves around Linux-based machine, but I am open to learn more about pwning Windows Environments!<br>
-                        I have experience programming in several languages such as Java, Python, C#.
-                    </p>
+            <div id="topLayer">
+                <h1>Lorem</h1>
             </div>
 
-            <div>
-                <h3><a class="mButton" href="https://endermansupreme.itch.io/" target="_blank">My Itch.IO</a></h3>
-                <h4 id="yt_link"><a class="mButton" href="https://www.youtube.com/@There_is_Light_in_the_Darkness" target="_blank">Game-Dev: Updates Channel</a></h4>
-                    <h4>Top Projects Links</h4>
-                        <ol>
-                            <li><a href="https://endermansupreme.itch.io/chat-2" target="_blank">CHAT_2</a></li>
-                            <li><a href="https://endermansupreme.itch.io/chat" target="_blank">CHAT</a></li>
-                            <li><a href="https://endermansupreme.itch.io/adenia" target="_blank">Adenia</a></li>
-                        </ol>
-                        <br>
-
-                    <h4 id="buttonInfo">Press the Images to See the Next</h4>
-                    <h3 id="githubHeader"><a class="mButton" href="https://github.com/EndermanSUPREME/" target="_blank">My Github</a></h3>
+            <div class="content mt-5">
+                <p> <!-- General Summary -->
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora impedit animi, ducimus distinctio reiciendis delectus officia saepe, voluptates sint pariatur praesentium dolorum itaque a aut consectetur obcaecati id natus. Omnis.
+                </p>
             </div>
         </main>
 
         <footer>
             <div>
-                <p>Question about my Game Development or found possible bugs/glitches in one of my Releases? <br> <a href="maltio:enderdevunity2019@gmail.com">Email Me!</a> <br> Copyright &copy; 2023 Ender</p>
+                <p>Copyright &copy; 2024 Ender</p>
             </div>
         </footer>
 
