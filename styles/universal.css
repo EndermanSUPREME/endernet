@@ -1,0 +1,98 @@
+@font-face {
+    /* Ubuntu_Mono Source: https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=Whoami&preview.layout=row&preview.text_type=custom&category=Monospace&noto.lang=en_Latn&noto.region=US */
+
+    font-family: 'ubuntuFont';
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf'); /* IE9 Compat Modes */
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('embedded-opentype'), /* IE6-IE8 */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('svg'); /* Legacy iOS */
+
+        font-style: normal;
+}
+
+@font-face {
+    /* Ubuntu_Mono Source: https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=Whoami&preview.layout=row&preview.text_type=custom&category=Monospace&noto.lang=en_Latn&noto.region=US */
+
+    font-family: 'ubuntuFont';
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf'); /* IE9 Compat Modes */
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf') format('embedded-opentype'), /* IE6-IE8 */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf') format('woff2'), /* Super Modern Browsers */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf') format('woff'), /* Pretty Modern Browsers */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf') format('svg'); /* Legacy iOS */
+
+        font-style: italic;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
+    font-family: ubuntuFont;
+}
+
+p {
+    margin: auto;
+    padding: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:hover {
+    text-shadow: rgb(0, 0, 0) 0 0 20px;
+    text-decoration: underline;
+    color: white;
+}
+
+a:visited {
+    color: rgb(245, 142, 24);
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.329);
+    margin: auto;
+    padding: 25px;
+    max-width: 1920px;
+    width: calc(90% + 0.35vw);
+
+    text-shadow: rgb(0, 0, 0) 0 0 20px;
+    color: rgb(206, 206, 206);
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.329);
+
+    margin: auto;
+    width: calc(90% + 0.35vw);
+    max-width: 1920px;
+
+    font-size: 15px;
+    text-shadow: rgb(0, 0, 0) 0 0 20px;
+    color: rgb(206, 206, 206);
+}
+
+#mButton {
+    font-style: italic;
+}
+
+#topLayer {
+    padding-top: 25px;
+}
+
+#background_video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
