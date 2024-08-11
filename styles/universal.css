@@ -31,6 +31,7 @@ body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
 }
 
 p {
+    font-size: 3.15vw; /* dynamic font size based on view width */
     margin: auto;
     padding: 15px;
 }
@@ -99,4 +100,13 @@ footer {
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+
+/*
+Media Queries
+*/
+@media (min-width: 600px) {
+    p {
+        font-size: 20px; /* Set a maximum font size */
+    }
 }
