@@ -77,6 +77,10 @@ footer {
     color: rgb(206, 206, 206);
 }
 
+#dropdownTitle {
+    margin-left: 15px;
+}
+
 #htbProfileImage {
     max-width: 150px;
     width: 20vw;
