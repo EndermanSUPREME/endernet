@@ -77,6 +77,10 @@ footer {
     color: rgb(206, 206, 206);
 }
 
+#mHeader {
+    padding-left: 5%;
+}
+
 #mButton {
     font-style: italic;
 }
