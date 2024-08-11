@@ -80,11 +80,21 @@
 
             <div class="content mt-5">
                 <div id="topLayer">
-                    <h1 id="mHeader">Lorem</h1>
+                    <h1 id="mHeader">C2 Server using C++</h1>
                 </div>
 
                 <p> <!-- General Summary -->
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora impedit animi, ducimus distinctio reiciendis delectus officia saepe, voluptates sint pariatur praesentium dolorum itaque a aut consectetur obcaecati id natus. Omnis.
+                    I was getting interested in the various C2 Clients such as the famous <a href="https://havocframework.com/" target="_blank">HAVOC</a> and <a href="https://sliver.sh/" target="_blank">Sliver</a> part of me wondered,
+                    "could I possibly build my own C2 Server?" I knew I wouldn't have anything as spectacular as the two I just mentioned
+                    but I figured the experience and learning opportunity would be great to have, so I went for it. I figured the main gist
+                    of the C2 I needed, was the ability to capture reverse-shells and save the sessions in some storage where I could access
+                    them later, I'm used to this functionality from using <a href="https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter.html" target="_blank">Meterpreter</a> when doing Windows based CTFs.<br><br>
+
+                    My solution that I implemented was to use a Socket Server and storing the newly connected sockets into a vector
+                    that I could easily move around in later, I had not tested it within a HTB Environment, but general testing showed
+                    the project to work ok, it would be much better such as faster speeds and so forth but I'm proud of it.<br><br>
+
+                    I published this project on Github <a href="https://github.com/EndermanSUPREME/Basic_C2_Server">HERE.</a>
                 </p>
             </div>
         </main>
