@@ -19,22 +19,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // into the content of the tag found, the snippet above is used in multiple pages
     document.getElementById("InterestingProjects").innerHTML = projectListsBlock;
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    let bgVideo = document.getElementById("background_video");
-    let timeout = setTimeout(() => {
-        console.log("Background video took too long to load, removing to improve loading speed...");
-        bgVideo.remove();
-    }, 3000); // 3 seconds timeout
-
-    // cancel the timeout if we can render the video properly
-    bgVideo.addEventListener("canplaythrough", () => {
-        clearTimeout(timeout);
-    });
-
-    // remove if the video runs into an issue
-    bgVideo.addEventListener("error", () => {
-        console.log("Error loading background video, removing to improve loading speed...");
-        bgVideo.remove();
-    });
-});
