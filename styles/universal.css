@@ -27,6 +27,11 @@
         font-style: italic;
 }
 
+/* Incase the video does not render correctly */
+body {
+    background-color: #454545;
+}
+
 body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
     font-family: ubuntuFont;
 }
