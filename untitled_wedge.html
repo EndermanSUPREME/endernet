@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ender-Net</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta http-equiv='cache-control' content='no-cache'> 
+        <meta http-equiv='expires' content='0'> 
+        <meta http-equiv='pragma' content='no-cache'>
+
+        <link rel="icon" href="images/logo.png">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="styles/universal.css" rel="stylesheet">
+        <style>
+            #sdmlBranches {
+                font-size: 3.15vw;
+                margin-left: 25px;
+            }
+
+            @media (min-width: 600px) {
+                #sdmlBranches {
+                    font-size: 20px; /* Set a maximum font size */
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <div>
+                        <!-- Used to push the button to the right side of the top bar -->
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                        aria-controls="offcanvasDarkNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">More About Me</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Summary</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="gameDevelopment.html">Game Development</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="cyberSecurity.html">Cyber Security</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">More about Me</a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Interesting Projects
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" id="InterestingProjects"></ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content mt-5">
+                <div id="topLayer">
+                    <h1 id="mHeader">Untitled Wedge</h1>
+                </div>
+
+                <p> <!-- General Summary -->
+                    I competed with my friend <a href="https://web.cs.kent.edu/~irohrbac" target="_blank">Ian</a> KSU Combat Robotics Tournament (March 22, 9am-5pm, Timken Atrium).
+                    For our robot we called it "Untitled Wedge", we built our bot with the intention of knowing zero battle bot engineering. The design classified as a
+                    Control-Bot, as it has no weapon. Knowing our competitors we wanted to take advantage of the gaps between the bottom of their bots and the floor.
+                    This allowed us to become a ramp where we could redirect the opponent's movement to cause their weapon to not hit our bot and/or flip them upside-down,
+                    where they couldn't move after. Our first match was against the over winner, so we ending up losing. However we stood our ground and drew it to time,
+                    while others ended it K-O. The second match was as strong showing of control and aggression, however the driver got too aggressive and got
+                    the bot stuck in the gap between the wall and floor, causing us to lose by K-O. For the last match in the bracket was a forfeit from our opponent due to
+                    the winner destroying them to disrepair. But that wasn't the last battle of us that day, at the end we all wanted a brawl, where all working
+                    bots would battle at the same time. After the brawl the remaining bot that could move was the winning bot (Katana) and us.
+                </p>
+
+                <div class="container-fluid">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-2">
+                        <div class="col-sm-3">
+                            <div class="card" style="max-width: 300px;">
+                                <img src="images/untitled_wedge (1).JPG" width="200px" height="200px" class="card-img-top" alt="...">
+                                <div class="card-body" style="background-color: rgb(51, 52, 45);">
+                                    <h5 class="card-title">Untitled Wedge</h5>
+                                    <p class="card-text">This is before we engaged in any battle</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card" style="max-width: 300px;">
+                                <img src="images/untitled_wedge (2).JPG" width="200px" height="200px" class="card-img-top" alt="...">
+                                <div class="card-body" style="background-color: rgb(51, 52, 45);">
+                                    <h5 class="card-title">Untitled Wedge</h5>
+                                    <p class="card-text">After-math of our first fight against Katana</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card" style="max-width: 300px;">
+                                <img src="images/untitled_wedge (3).JPG" width="200px" height="200px" class="card-img-top" alt="...">
+                                <div class="card-body" style="background-color: rgb(51, 52, 45);">
+                                    <h5 class="card-title">Untitled Wedge</h5>
+                                    <p class="card-text">After-math of our second fight against Mini-Taur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <p>Copyright &copy; 2025 Ender</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>

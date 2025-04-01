@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectListsBlock = `
         <li id="dropdownTitle">General</li>
         <li><a class="dropdown-item" href="smiirlcounter.html">Hardware Hack</a></li>
+        <li><a class="dropdown-item" href="untitled_wedge.html">Untitled Wedge</a></li>
         <li>
             <hr class="dropdown-divider">
         </li>
