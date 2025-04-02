@@ -15,15 +15,38 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link href="styles/universal.css" rel="stylesheet">
         <style>
-            #sdmlBranches {
-                font-size: 3.15vw;
-                margin-left: 25px;
+            button {
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-family: 'ubuntuFont';
+                text-transform: uppercase;
+                font-size: 14px;
+                width: 150px;
+                height: 50px;
+                padding: 5px;
+                margin: 10px;
+                border-radius: 5px;
+                transition: all 0.3s ease;
             }
 
-            @media (min-width: 600px) {
-                #sdmlBranches {
-                    font-size: 20px; /* Set a maximum font size */
-                }
+            /* Unix-style button */
+            .unix-button {
+                background-color: #2e2e2e; /* Dark background */
+                color: #f0f0f0; /* Light text */
+                border: 1px solid #555; /* Subtle border */
+            }
+
+            .unix-button:hover {
+                background-color: #444; /* Lighter background on hover */
+                border-color: #888; /* Lighter border color */
+                color: #f0f0f0; /* Maintain text color on hover */
+            }
+
+            .unix-button:active {
+                background-color: #333; /* Dark background when clicked */
+                border-color: #aaa; /* Border turns lighter when clicked */
+                color: #f0f0f0;
             }
         </style>
     </head>
@@ -123,6 +146,19 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="container-fluid" style="display: flex; justify-content: center; padding: 15px">
+                <div>
+                    <button class="unix-button" onclick="change_video_source(0)">Round One</button>
+                    <button class="unix-button" onclick="change_video_source(1)">Round Two</button>
+                    <button class="unix-button" onclick="change_video_source(2)">Brawl Match</button><br>
+
+                    <video id="battle_video_player" controls>
+                        <source id="battle_video_source" src="videos/round_one_battle_noaudio.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -131,6 +167,49 @@
             </div>
         </footer>
 
+        <script>
+            window.addEventListener('resize', function() {
+                resize_video_player();
+            });
+            window.addEventListener('DOMContentLoaded', function() {
+                resize_video_player();
+            });
+
+            function resize_video_player() {
+                var videoPlayerElement = document.getElementById("battle_video_player")
+                // logic to adjust the width and height based on screen size
+                
+                var adjustedWidth = 0;
+                var adjustedHeight = 0;
+
+                if (screen.width < 736) {
+                    adjustedWidth = screen.width * ( (screen.width - 100) / screen.width);
+                    adjustedHeight = 400 * ( (screen.width - 100) / screen.width);
+                } else {
+                    adjustedWidth = 736;
+                    adjustedHeight = 400;
+                }
+
+                videoPlayerElement.width = adjustedWidth;
+                videoPlayerElement.height = adjustedHeight;
+            }
+
+            function change_video_source(v) {
+                // find elements of interest
+                var videoPlayerElement = document.getElementById("battle_video_player")
+                var videoSource = document.getElementById("battle_video_source")
+                // change src based on parameter value
+                if (v == 0) {
+                    videoSource.src = "./videos/round_one_battle-noaudio.mp4";
+                } else if (v == 1) {
+                    videoSource.src = "./videos/round_two_battle-noaudio.mp4";
+                } else if (v == 2) {
+                    videoSource.src = "./videos/mash_pit_match_battle-noaudio.mp4";
+                }
+                // reload to update the src change
+                videoPlayerElement.load();
+            }
+        </script>
         <script src="js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
