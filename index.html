@@ -1,123 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Ender-Net</title>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta http-equiv='cache-control' content='no-cache'> 
-        <meta http-equiv='expires' content='0'> 
-        <meta http-equiv='pragma' content='no-cache'>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ender-Net</title>
 
-        <link rel="icon" href="images/logo.png">
+    <!-- Prevent caching -->
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link href="styles/universal.css" rel="stylesheet">
-        <style>
-            .scrolling-text-container {
-                max-height: 200px; /* Set a maximum height for the container */
-                overflow-y: auto; /* Enable vertical scrolling */
-                box-sizing: border-box; /* Ensure padding is included in height */
-            }
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" />
 
-            #profileArea {
-                padding: 5%;
-            }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
 
-            #profileImage {
-                max-width: 200px;
-                width: 65%;
-                padding-left: 5%;
-                margin: auto;
+    <!-- Custom Styles -->
+    <link href="styles/universal.css" rel="stylesheet" />
 
-                border-radius: 25%;
-            }
+    <style>
+        /* Custom Styles */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-            #profileImageText {
-                background-color: rgba(0, 0, 0, 0);
-                max-width: 300px;
-                width: 100%;
-            }
-        </style>
-    </head>
+        .hero {
+            background: #164694af;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 100px;
+            /* Adjust this value to move header further down */
+        }
 
-    <body>
-        <main>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <div class="container-fluid">
-                    <div>
-                        <!-- Used to push the button to the right side of the top bar -->
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                        aria-controls="offcanvasDarkNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">More About Me</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Summary</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="gameDevelopment.html">Game Development</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="cyberSecurity.html">Cyber Security</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">More about Me</a>
-                                </li>
+        .hero .container {
+            margin-top: 60px;
+        }
 
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Interesting Projects
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-dark" id="InterestingProjects"></ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        .scrolling-text-container {
+            max-height: 400px;
+            /* Increased height for the scrolling text container */
+            overflow-y: auto;
+            box-sizing: border-box;
+            padding-right: 0px;
+        }
+
+        .scrolling-text-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <div></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">More About Me</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
-            </nav>
-            
-            <div class="content mt-5">
-                <div id="topLayer">
-                    <h1>Welcome to my Site!</h1>
-                </div>
-
-                <h3 id="mHeader">Whoami?</h3>
-                <div class="scrolling-text-container">
-                    <p> <!-- General Summary -->
-                        My name is Noah, my online alias is `Ender`, I am an active learning game developer, ethical hacker in learning, and a hardworking reliable worker.
-                        Consisting my background: I have been making games through the Unity Engine since September 2019, junior year of high school.
-                        I have been self-teaching myself <a id="mButton" href="https://app.hackthebox.com/profile/activity/625394" target="_blank">ethical hacking</a> using Kali Linux and pwning machines on <a id="mButton" href="https://www.hackthebox.com/">HackTheBox</a> since March 2022,
-                        most of my experience revolves around Linux-based machine, but I am open to learn more about pwning Windows Environments!
-                        I have <a href="https://github.com/EndermanSUPREME">experience programming</a> in several languages such as C++, C#, Python.
-                    </p>
-                </div>
-
-                <div id="profileArea">
-                    <img id="profileImage" src="images/pfp.jpeg">
-                    <img id="profileImageText" src="images/coolAnimation_0.gif">
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link active" href="#">Summary</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gameDevelopment.html">Game Development</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cyberSecurity.html">Cyber Security</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">More About Me</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Interesting Projects
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" id="InterestingProjects"></ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </main>
+        </div>
+    </nav>
 
-        <footer>
-            <div>
-                <p>Copyright &copy; 2025 Ender</p>
+    <!-- Hero Section -->
+    <section class="hero mt-2">
+        <div class="container">
+            <h1 class="display-6">Welcome to Ender-Net</h1>
+            <p class="lead">Game Developer | Ethical Hacker | Computer Science Major</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title text-center" style="margin-top: 40px;">Whoami?</h2>
+            <div class="scrolling-text-container mx-auto col-md-10 col-lg-8">
+                <p>
+                    My name is Noah, my online alias is <code>Ender</code>. I'm a passionate game developer and ethical
+                    hacker in training.
+                    I've been developing games in Unity since 2019 (starting in high school), and since 2022 I've been
+                    immersed in self-teaching ethical hacking through platforms like
+                    <a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a>.
+                    I'm comfortable working in Linux environments and am eager to improve my Windows exploitation skills
+                    too.
+                    I'm also experienced in <a href="https://github.com/EndermanSUPREME" target="_blank">programming
+                        languages</a> such as C++, C#, and Python.
+                    You can track my hacking progress <a href="https://app.hackthebox.com/profile/activity/625394"
+                        target="_blank">here</a>.
+                </p>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <script src="js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    </body>
+    <!-- Footer -->
+    <footer>
+        <div>
+            &copy; 2025 Ender
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>

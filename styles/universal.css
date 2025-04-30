@@ -1,117 +1,123 @@
 @font-face {
-    /* Ubuntu_Mono Source: https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=Whoami&preview.layout=row&preview.text_type=custom&category=Monospace&noto.lang=en_Latn&noto.region=US */
-
     font-family: 'ubuntuFont';
-    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf'); /* IE9 Compat Modes */
-    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('embedded-opentype'), /* IE6-IE8 */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('woff2'), /* Super Modern Browsers */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('woff'), /* Pretty Modern Browsers */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('svg'); /* Legacy iOS */
-
-        font-style: normal;
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf') format('truetype');
+    font-style: normal;
 }
 
 @font-face {
-    /* Ubuntu_Mono Source: https://fonts.google.com/specimen/Ubuntu+Mono?preview.text=Whoami&preview.layout=row&preview.text_type=custom&category=Monospace&noto.lang=en_Latn&noto.region=US */
-
     font-family: 'ubuntuFont';
-    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf'); /* IE9 Compat Modes */
-    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf') format('embedded-opentype'), /* IE6-IE8 */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf') format('woff2'), /* Super Modern Browsers */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf') format('woff'), /* Pretty Modern Browsers */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf') format('svg'); /* Legacy iOS */
-
-        font-weight: bold;
-        font-style: italic;
-}
-
-/* Incase the video does not render correctly */
-body {
-    background-color: #454545;
-}
-
-body, p, h1, h2, h3, h4, h5, h6, span, a, li, div {
-    font-family: ubuntuFont;
-}
-
-p {
-    font-size: 3.15vw; /* dynamic font size based on view width */
-    margin: auto;
-    padding: 15px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:link {
-    color: white;
-}
-
-a:hover {
-    text-shadow: rgb(0, 0, 0) 0 0 20px;
-    text-decoration: underline;
-    color: white;
-}
-
-a:visited {
-    color: rgb(245, 142, 24);
-}
-
-main {
-    background-color: rgba(0, 0, 0, 0.329);
-    margin: auto;
-    padding: 25px;
-    max-width: 1920px;
-    width: calc(90% + 0.35vw);
-
-    text-shadow: rgb(0, 0, 0) 0 0 20px;
-    color: rgb(206, 206, 206);
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.329);
-
-    margin: auto;
-    width: calc(90% + 0.35vw);
-    max-width: 1920px;
-
-    font-size: 15px;
-    text-shadow: rgb(0, 0, 0) 0 0 20px;
-    color: rgb(206, 206, 206);
+    src: url('../Fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: bold;
 }
 
 #dropdownTitle {
-    margin-left: 15px;
+    padding-left: 10px;
+}
 
+/* Base Styles */
+body {
+    background-color: #0f1117; /* Darker for contrast */
+    color: #e0e0e0;
+    font-family: 'ubuntuFont', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: rgba(33, 33, 69, 0.8);
+    margin: auto;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ubuntuFont', monospace;
     font-weight: bold;
-    font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000;
 }
 
-#htbProfileImage {
-    max-width: 150px;
-    width: 20vw;
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
+/* Links */
+a {
+    color: #90caf9;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    text-shadow: 0 0 8px #64b5f6;
+}
+
+a:visited {
+    color: #f48fb1;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(20, 20, 20, 0.9);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin: 2rem auto 0 auto;
+}
+
+/* Navbar Tweak (if custom) */
+.navbar {
+    box-shadow: 0 0 10px #000;
+}
+
+/* Scrollable Text Area */
+.scrolling-text-container {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: rgba(40, 40, 40, 0.7);
+}
+
+#profileArea {
+    height: 100px;
+}
+
+/* Images */
+#profileImage {
+    border-radius: 25%;
+    display: block;
+}
+
+/* Titles and Sections */
 #mHeader {
     padding-left: 5%;
+    margin-top: 2rem;
+    color: #ffffff;
 }
 
 #mButton {
     font-style: italic;
+    color: #ffcc80;
 }
 
 #topLayer {
-    padding-top: 25px;
+    padding-top: 2rem;
 }
 
-/*
-Media Queries
-*/
+/* Responsive Typography */
 @media (min-width: 600px) {
     p {
-        font-size: 20px; /* Set a maximum font size */
+        font-size: 1.2rem;
     }
 }
