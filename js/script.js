@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <li id="dropdownTitle">General</li>
         <li><a class="dropdown-item" href="smiirlcounter.html">Hardware Hack</a></li>
         <li><a class="dropdown-item" href="untitled_wedge.html">Untitled Wedge</a></li>
+        <li><a class="dropdown-item" href="khi.html">Kent Hack It!</a></li>
         <li>
             <hr class="dropdown-divider">
         </li>
