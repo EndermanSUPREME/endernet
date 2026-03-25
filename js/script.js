@@ -26,8 +26,8 @@ function generateLinks() {
         }
         const p1 = document.getElementById("cyber-sec-summ");
         if (p1) {
-            const bE = "SSBkbyB2YXJpb3VzIHByb2plY3RzIGluIG15IDxhIGhyZWY9IiR7cjJ9Ij5wZXJzb25hbCBvcmdhbml6YXRpb248L2E+LiBQcm9qZWN0cyBpbmNsdWRlIHNtYWxsIHRvb2xzLCBiYXNpYyBtYWx3YXJlIHByb2plY3RzIGZvciB0ZWFjaGluZywgYW5kIGV4cGxvaXRhdGlvbi4=";
-            p1.innerHTML += ` ${atob(bE)}`;
+            const bE = "YCBJIGRvIHZhcmlvdXMgcHJvamVjdHMgaW4gbXkgPGEgaHJlZj0iJHtyMn0iPnBlcnNvbmFsIG9yZ2FuaXphdGlvbjwvYT4uIFByb2plY3RzIGluY2x1ZGUgc21hbGwgdG9vbHMsIGJhc2ljIG1hbHdhcmUgcHJvamVjdHMgZm9yIHRlYWNoaW5nLCBhbmQgZXhwbG9pdGF0aW9uLmA=";
+            p1.innerHTML += eval(atob(bE));
         }
     }
 }
