@@ -23,12 +23,21 @@
 
     <style>
         /* Custom Styles */
-        html,
-        body {
+        html, body {
             height: 100%;
             margin: 0;
             display: flex;
             flex-direction: column;
+        }
+
+        .content {
+            flex: 1; /* This makes the main content push footer to the bottom */
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
         }
 
         .hero {
@@ -110,7 +119,7 @@
     </section>
 
     <!-- About Section -->
-    <section>
+    <section class="content">
         <div class="container">
             <h2 class="section-title text-center" style="margin-top: 40px;">Whoami?</h2>
             <div class="scrolling-text-container mx-auto col-md-10 col-lg-8">
@@ -134,7 +143,7 @@
     <!-- Footer -->
     <footer>
         <div>
-            &copy; 2025 Ender
+            Copyright &copy; 2025 Ender
         </div>
     </footer>
 
